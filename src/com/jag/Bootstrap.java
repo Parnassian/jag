@@ -9,8 +9,6 @@ import javax.swing.UIManager;
  * @since 0.1
  * @see jag
  * @category rs3
- *
- * jag
  */
 public class Bootstrap {
 
