@@ -23,8 +23,7 @@ public final class JagSecurity extends SecurityManager {
     }
 
     private boolean isSubFolder(File toCheck, File toFind) {
-        return toCheck.getAbsolutePath().equals(toFind.getAbsolutePath())
-                || isSubFolder(toCheck.getParentFile(), toFind);
+        return toCheck.getAbsolutePath().startsWith(toFind.getAbsolutePath());
     }
 
 }
