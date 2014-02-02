@@ -1,5 +1,7 @@
 package com.jag;
 
+import com.jag.util.JagSecurity;
+
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
@@ -15,6 +17,7 @@ public class Bootstrap {
 	public static void main(String[] args) {
 		handleArgs(args);
 		setLookAndFeel();
+        System.setSecurityManager(new JagSecurity());
 	}
 
 	private static void handleArgs(String[] args) {
