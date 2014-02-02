@@ -18,7 +18,7 @@ public class Bootstrap {
 	}
 
 	private static void handleArgs(String[] args) {
-		//just an example...
+		// just an example...
 		for (int i = 0; i < args.length; i++) {
 			String arg = args[i];
 			switch (arg) {
