@@ -4,13 +4,11 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 /**
- * 
  * @author Parnassian
  * @version 0.1
  * @since 0.1
  * @see jag
  * @category rs3
- * 
  */
 public class Bootstrap {
 
