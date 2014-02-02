@@ -63,7 +63,7 @@ public class ReflectUtils extends Modifier {
 	}
 
 	public static boolean isArray(Object object) {
-		return isArray(object);
+		return isArray(object.getClass());
 	}
 
 	public static int getArrayLength(Object object) {
