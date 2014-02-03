@@ -1,6 +1,7 @@
 package com.jag;
 
 import com.jag.core.Jag;
+import com.jag.logger.JagLogger;
 import com.jag.util.JagSecurity;
 
 import javax.swing.JOptionPane;
@@ -18,6 +19,7 @@ public class Bootstrap {
 	public static void main(String[] args) {
 		handleArgs(args);
 		setLookAndFeel();
+		JagLogger.setup();
         //System.setSecurityManager(new JagSecurity());
         Jag.getInstance();
 	}

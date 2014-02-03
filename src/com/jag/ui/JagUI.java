@@ -9,6 +9,5 @@ public class JagUI extends JFrame {
 		setTitle("Jag");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-	
 
 }
