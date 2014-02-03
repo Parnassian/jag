@@ -16,8 +16,11 @@ public final class JagSecurity extends SecurityManager {
         if (p instanceof FilePermission) {
             FilePermission fp = (FilePermission) p;
             File file = new File(fp.getName());
-            if (!isSubFolder(file, HOME_DIRECTORY)) {
-                throw new SecurityException();
+            if (isSubFolder(file, HOME_DIRECTORY)) {
+                System.out.println("[JagSecurity] Allowing "
+                        + fp.getActions()
+                        + " to file "
+                        + file.getAbsolutePath());
             }
         }
     }

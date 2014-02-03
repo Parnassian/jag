@@ -20,7 +20,7 @@ public class Bootstrap {
 		handleArgs(args);
 		setLookAndFeel();
 		JagLogger.setup();
-        //System.setSecurityManager(new JagSecurity());
+        System.setSecurityManager(new JagSecurity());
         Jag.getInstance();
 	}
 
