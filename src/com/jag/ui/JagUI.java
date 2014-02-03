@@ -7,8 +7,8 @@ public class JagUI extends JFrame {
 
 	public JagUI() {
 		setTitle("Jag");
-		
-		pack();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
+	
 
 }

@@ -7,10 +7,10 @@ import java.util.HashMap;
 
 import com.jag.canvas.RS3Canvas;
 
-public class JagClassLoader extends URLClassLoader {
+public class JagAppletClassLoader extends URLClassLoader {
 	private static HashMap<Class<?>, Class<?>> remapper = new HashMap<Class<?>, Class<?>>();
 
-	public JagClassLoader(URL[] urls) {
+	public JagAppletClassLoader(URL[] urls) {
 		super(urls);
 		
 		remapper.put(Canvas.class, RS3Canvas.class);
@@ -18,8 +18,17 @@ public class JagClassLoader extends URLClassLoader {
 
 	@Override
 	public Class<?> loadClass(String className) throws ClassNotFoundException {
-		Class<?> clazz = super.loadClass(className);
-		return remap(clazz);
+		return findClass(className);
+	}
+	
+	@Override
+	public Class<?> findClass(String className) throws ClassNotFoundException {
+		try {
+			return super.getSystemClassLoader().loadClass(className);
+		} catch (Exception e) {
+			
+		}
+		return super.findClass(className);
 	}
 	
 	public Class<?> remap(Class<?> key) {

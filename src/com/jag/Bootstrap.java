@@ -1,5 +1,6 @@
 package com.jag;
 
+import com.jag.core.Jag;
 import com.jag.util.JagSecurity;
 
 import javax.swing.JOptionPane;
@@ -17,7 +18,8 @@ public class Bootstrap {
 	public static void main(String[] args) {
 		handleArgs(args);
 		setLookAndFeel();
-        System.setSecurityManager(new JagSecurity());
+        //System.setSecurityManager(new JagSecurity());
+        Jag.getInstance();
 	}
 
 	private static void handleArgs(String[] args) {
